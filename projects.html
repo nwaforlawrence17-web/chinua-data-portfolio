@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Project library for Command Workflow Studio featuring workbook automation, reporting systems, merge pipelines, and QA proof."
+    />
+    <title>Projects | Command Workflow Studio</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/site.css" />
+  </head>
+  <body data-page="projects" data-theme="dark">
+    <div class="glow-blob glow-blob--1"></div>
+    <div class="glow-blob glow-blob--2"></div>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" aria-label="Command Workflow Studio home">
+          <span class="brand__mark">CW</span>
+          <span class="brand__copy">
+            <span class="brand__title">Command Workflow Studio</span>
+            <span class="brand__subtitle">Automation, reporting, and workbook engineering</span>
+          </span>
+        </a>
+        <div class="site-header__actions">
+          <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">Light mode</button>
+        </div>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a class="site-nav__link" href="index.html">Home</a>
+          <a class="site-nav__link is-active" href="projects.html">Projects</a>
+          <a class="site-nav__link" href="contact.html">Contact</a>
+          <a class="button button--primary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry" data-loading-button>Start a scope note</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="page-hero section">
+        <div class="section__inner page-hero__grid">
+          <div class="reveal">
+            <span class="eyebrow">Project system</span>
+            <h1>Static project cards, easy to duplicate, and fully compatible with local file opens.</h1>
+            <p class="hero__lead">
+              Each project is a normal HTML card with a matching detail block further down the page. To add future work,
+              duplicate a card and duplicate the linked detail section.
+            </p>
+            <div class="button-row">
+              <a class="button button--primary" href="contact.html">Discuss a similar build</a>
+              <a class="button button--secondary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry" data-loading-button>Email directly</a>
+            </div>
+          </div>
+          <aside class="panel reveal" style="--delay: 120ms">
+            <span class="panel__label">How to scale this page</span>
+            <h2>Duplicate one card and one detail block.</h2>
+            <p>
+              The layout is intentionally simple: a compact project card for browsing and a larger detail section for
+              context, tools, and shipped outcomes.
+            </p>
+            <ul class="bullet-list">
+              <li>Cards work without JavaScript</li>
+              <li>View Details buttons jump to anchor sections</li>
+              <li>All links stay relative for local and hosted use</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__inner">
+          <div class="section__head reveal">
+            <div>
+              <span class="eyebrow">Project cards</span>
+              <h2>Browse the work at portfolio speed.</h2>
+            </div>
+            <p>
+              These cards are hardcoded into the page so the project library still works if scripts fail or are blocked.
+            </p>
+          </div>
+          <!-- Duplicate one .project-card and one matching .project-detail block below to add a future project. -->
+          <div class="card-grid card-grid--three">
+            <article class="project-card project-card--dynamic reveal" style="--delay: 80ms">
+              <span class="card__eyebrow">professional_sales_analysis.py</span>
+              <h3>Senior Sales Analysis Report</h3>
+              <p>Data cleanup, date validation, pivot analysis, and executive-friendly workbook output.</p>
+              <div class="tag-row">
+                <span class="tag">Pandas</span>
+                <span class="tag">xlwings</span>
+                <span class="tag">Excel</span>
+              </div>
+              <a class="button button--secondary" href="#project-sales-analysis">View Details</a>
+            </article>
+
+            <!-- RE-INSERTED CLEAN VERSION -->
+            <article class="project-card project-card--featured project-card--dynamic reveal" style="--delay: 120ms">
+              <div class="project-card__top">
+                <span class="card__eyebrow">featured multi-region automation</span>
+                <span class="project-card__badge">Verified</span>
+              </div>
+              <h3>Retail Revenue Recovery Pipeline</h3>
+              <p>
+                Engineered a unified revenue recovery system for retail markets. Merged 3 regional datasets into a 
+                single USD-standardized master dataset with automated deduplication and reporting.
+              </p>
+              <div class="tag-row">
+                <span class="tag">USD Conversion</span>
+                <span class="tag">Sales Recovery</span>
+                <span class="tag">Master Data</span>
+              </div>
+              <div class="project-card__actions">
+                <a class="button button--secondary" href="#project-revenue-recovery-system">View Delivery Walkthrough</a>
+              </div>
+            </article>
+
+            <article class="project-card project-card--featured project-card--dynamic reveal" style="--delay: 140ms">
+              <div class="project-card__top">
+                <span class="card__eyebrow">Enterprise Data Recovery</span>
+                <span class="project-card__badge">High-Integrity</span>
+              </div>
+              <h3>Extreme Data Recovery & BI Pipeline</h3>
+              <p>
+                Successfully restored 20,500+ records of corrupted sales data using custom Python automation engines. 
+                Delivered a board-ready BI dashboard with regional performance and seasonal growth insights.
+              </p>
+              <div class="tag-row">
+                <span class="tag">20k Records</span>
+                <span class="tag">Data Restoration</span>
+                <span class="tag">BI Analytics</span>
+              </div>
+              <div class="project-card__actions">
+                <a class="button button--secondary" href="#project-extreme-recovery">View 20k Case Study</a>
+              </div>
+            </article>
+            <article class="project-card project-card--dynamic reveal" style="--delay: 160ms">
+              <span class="card__eyebrow">sql_mission.py</span>
+              <h3>Mission SQL Revenue Pack</h3>
+              <p>Customer merges, country revenue totals, top-customer ranking, and monthly trend reporting.</p>
+              <div class="tag-row">
+                <span class="tag">Excel</span>
+                <span class="tag">Revenue</span>
+                <span class="tag">Merges</span>
+              </div>
+              <a class="button button--secondary" href="#project-sql-pack">View Details</a>
+            </article>
+            <article class="project-card project-card--dynamic reveal" style="--delay: 240ms">
+              <span class="card__eyebrow">excel_merger.py</span>
+              <h3>Bot Output Merge Engine</h3>
+              <p>Workbook aggregation pipeline that reads multiple files, preserves source context, and removes duplicates.</p>
+              <div class="tag-row">
+                <span class="tag">xlwings</span>
+                <span class="tag">Deduping</span>
+                <span class="tag">Reports</span>
+              </div>
+              <a class="button button--secondary" href="#project-merge-engine">View Details</a>
+            </article>
+            <article class="project-card project-card--dynamic reveal" style="--delay: 320ms">
+              <span class="card__eyebrow">pro_mission_v4.py</span>
+              <h3>Comparative Growth Workbook</h3>
+              <p>Product ranking, laptop revenue comparison, and month-over-month growth analysis in one workbook.</p>
+              <div class="tag-row">
+                <span class="tag">Growth</span>
+                <span class="tag">Excel</span>
+                <span class="tag">Comparisons</span>
+              </div>
+              <a class="button button--secondary" href="#project-growth-workbook">View Details</a>
+            </article>
+            <article class="project-card project-card--dynamic reveal" style="--delay: 400ms">
+              <span class="card__eyebrow">check_xlookup.py</span>
+              <h3>XLOOKUP Readiness Check</h3>
+              <p>Compatibility testing workflow for Excel formula support before workbook delivery and handoff.</p>
+              <div class="tag-row">
+                <span class="tag">QA</span>
+                <span class="tag">XLOOKUP</span>
+                <span class="tag">Compatibility</span>
+              </div>
+              <a class="button button--secondary" href="#project-xlookup-check">View Details</a>
+            </article>
+            <article class="project-card project-card--dynamic reveal" style="--delay: 480ms">
+              <span class="card__eyebrow">data_report.py</span>
+              <h3>Customer Spend Merge Report</h3>
+              <p>Merged order and customer data into a readable workbook plus summary table for fast review.</p>
+              <div class="tag-row">
+                <span class="tag">Customers</span>
+                <span class="tag">Summary</span>
+                <span class="tag">Excel</span>
+              </div>
+              <a class="button button--secondary" href="#project-customer-spend">View Details</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="section__inner detail-stack">
+          <article class="project-detail reveal" id="project-sales-analysis">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Detailed project view</span>
+                <h2>Senior Sales Analysis Report</h2>
+              </div>
+              <a class="button button--secondary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry%20-%20Sales%20Analysis" data-loading-button>Start similar project</a>
+            </div>
+            <p>
+              This build cleaned malformed sales data, removed invalid rows, normalized country labels, validated dates,
+              and generated pivot-ready workbook output for stakeholder review.
+            </p>
+            <ul class="bullet-list">
+              <li>Removed missing identifiers and non-numeric amount values before reporting</li>
+              <li>Validated dates for cleaner monthly trend logic</li>
+              <li>Generated revenue by country, product, month, and top customer views</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Sales_Analysis_Senior_Report.xlsx</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Pivot Tables</span>
+            </div>
+          </article>
+
+          <article class="project-detail project-detail--featured reveal" id="project-revenue-recovery-system">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Featured project</span>
+                <h2>Multi-Region Retail Revenue Recovery System</h2>
+              </div>
+              <a class="button button--secondary" href="contact.html">Discuss this build</a>
+            </div>
+            <p>
+              This system starts with intentionally messy regional Excel files and turns them into a clean USD-standardized
+              master dataset, an analysis workbook, and a professional dashboard that a client can open with one click.
+            </p>
+            <ul class="bullet-list">
+              <li>Captured raw input screenshots showing regional variations (USA, UK, Nigeria)</li>
+              <li>Developed standardized merge logic for varied regional formats</li>
+              <li>Automated dashboard with one-click report generation</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">USA / UK / Nigeria</span>
+              <span class="tag">cleaned_master_dataset.xlsx</span>
+              <span class="tag">final_dashboard.xlsx</span>
+            </div>
+            <div class="project-video-block">
+              <div class="project-video__copy">
+                <span class="eyebrow">Inline portfolio demo</span>
+                <h3>30-second transformation walkthrough</h3>
+                <p>
+                   <strong>Automated Build Status:</strong> I have prepared the 30-second transition sequence 
+                   using your clean captures (5 seconds per frame). This video highlights exactly how the raw 
+                   inputs (Market IDs) become the final Dashboard.
+                </p>
+              </div>
+              <div class="project-video">
+                <video
+                  src="assets/projects/revenue_system/video/transition_clip.mp4"
+                  poster="assets/projects/revenue_system/video/video_poster.png"
+                  controls
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  preload="metadata"
+                ></video>
+                <div class="video-buttons">
+                   <a class="button button--file" href="assets/projects/revenue_system/video/_screenshots/raw_usa.png">
+                    <span class="button__icon">IMG</span>
+                    <span>View USA Raw</span>
+                  </a>
+                  <a class="button button--file" href="assets/projects/revenue_system/video/_screenshots/raw_uk.png">
+                    <span class="button__icon">IMG</span>
+                    <span>View UK Raw</span>
+                  </a>
+                  <a class="button button--file" href="assets/projects/revenue_system/video/_screenshots/raw_nga.png">
+                    <span class="button__icon">IMG</span>
+                    <span>View Nigeria Raw</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-gallery-block reveal">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Transformation Proof</span>
+                <h3>Visualizing the workflow from Raw to Recovery</h3>
+                <p>
+                  Every frame in this gallery is sourced directly from the project's clean capture state.
+                </p>
+              </div>
+              <div class="project-gallery">
+                <figure class="gallery-item">
+                  <img src="assets/projects/revenue_system/video/_screenshots/raw_usa.png" alt="Raw USA sales data" loading="lazy" />
+                  <figcaption>Raw Input</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/revenue_system/video/_screenshots/clean_data.png" alt="Cleaned and standardized dataset" loading="lazy" />
+                  <figcaption>Master Data</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/revenue_system/video/_screenshots/dashboard.png" alt="Final automated dashboard" loading="lazy" />
+                  <figcaption>Executive Dashboard</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-extreme-recovery">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Elite Case Study</span>
+                <h2>Extreme Data Recovery & Regional BI Pipeline</h2>
+              </div>
+              <a class="button button--primary" href="contact.html">Request Data Recovery Scope</a>
+            </div>
+            <p>
+              This flagship project involved the mass restoration of over 20,500 records of multi-regional sales data. 
+              The challenge was to convert raw, corrupted "Digital Chaos" into a high-fidelity environment with 
+              100% currency normalization (NGN) and professional world identities.
+            </p>
+            <ul class="bullet-list">
+              <li>Engineered a custom "Surgical Integrity" engine to purge 2,518 fuzzy duplicates</li>
+              <li>Restored 100% realistic world identities using verified domain mapping</li>
+              <li>Generated high-res BI visuals identifying a 45% revenue surge in the West African market</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">clean_data_perfect.xlsx</span>
+              <span class="tag">Executive_Summary_Report.xlsx</span>
+              <span class="tag">Zero-Tolerance QA</span>
+            </div>
+            <div class="project-gallery-block reveal">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Executive BI Dashboard</span>
+                <h3>Visualizing Revenue, Trends, and Portfolio Contribution</h3>
+                <p>
+                  These visualizations were generated directly from the recovered 20,500-record dataset, providing 
+                  immediate board-level insights into regional performance and seasonal peaks.
+                </p>
+              </div>
+              <div class="project-gallery">
+                <figure class="gallery-item">
+                  <img src="assets/projects/extreme_recovery/visuals/revenue_chart.png" alt="Revenue by Country Chart" loading="lazy" />
+                  <figcaption>Global Segmentation</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/extreme_recovery/visuals/trend_chart.png" alt="Sales Trend Peaks Chart" loading="lazy" />
+                  <figcaption>Seasonality Audit</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/extreme_recovery/visuals/product_chart.png" alt="Product Category Contribution Chart" loading="lazy" />
+                  <figcaption>Portfolio Contribution</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="project-video-block reveal">
+              <div class="project-video__copy">
+                <span class="eyebrow">The Proof of Perfection</span>
+                <h3>Evidence of Absolute Integrity</h3>
+                <p>
+                   Below is the actual Executive Handoff Report delivered to the client, summarizing the 100% 
+                   quality score reached after the Absolute Perfection cycle.
+                </p>
+              </div>
+              <div class="project-gallery">
+                 <figure class="gallery-item" style="grid-column: span 3;">
+                  <img src="assets/projects/extreme_recovery/visuals/handoff_report.png" alt="Final Handoff Report" loading="lazy" />
+                  <figcaption>Final Executive Handoff & Quality Audit</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-sql-pack">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Detailed project view</span>
+                <h2>Mission SQL Revenue Pack</h2>
+              </div>
+              <a class="button button--secondary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry%20-%20Revenue%20Pack" data-loading-button>Start similar project</a>
+            </div>
+            <p>
+              This workbook combines order and customer data to deliver country revenue totals, top customer ranking,
+              monthly revenue trends, and combined spend analysis in one compact review sheet.
+            </p>
+            <ul class="bullet-list">
+              <li>Merged source tables to enrich reporting context</li>
+              <li>Produced country totals and monthly trend summaries</li>
+              <li>Saved a formatted workbook sectioned for stakeholder scanning</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">sql_mission_report.xlsx</span>
+              <span class="tag">Revenue Analysis</span>
+              <span class="tag">Excel</span>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-merge-engine">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Detailed project view</span>
+                <h2>Bot Output Merge Engine</h2>
+              </div>
+              <a class="button button--secondary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry%20-%20Merge%20Engine" data-loading-button>Start similar project</a>
+            </div>
+            <p>
+              This pipeline scans workbook outputs, ingests non-empty sheets, tags file and sheet origin, removes
+              duplicate rows, and creates a single master workbook for downstream analysis.
+            </p>
+            <ul class="bullet-list">
+              <li>Preserves source lineage for better auditing</li>
+              <li>Combines multiple workbook structures into one reviewable asset</li>
+              <li>Saves a deduped master report ready for pivots and cleanup</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">MASTER_MERGED.xlsx</span>
+              <span class="tag">Deduping</span>
+              <span class="tag">Workbook Aggregation</span>
+            </div>
+            <div class="project-gallery-block reveal">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Bot Workflow Visuals</span>
+                <h3>Visualizing the Merge Engine Processing</h3>
+                <p>
+                  These frames capture the automated script actively scanning source files, standardizing structures, and consolidating outputs into a master file.
+                </p>
+              </div>
+              <div class="project-gallery">
+                <figure class="gallery-item">
+                  <img src="assets/projects/merge_engine/visuals/screenshot_20260404_034246.png" alt="Bot Output Overview" loading="lazy" />
+                  <figcaption>Pipeline Initiation</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/merge_engine/visuals/screenshot_20260404_034259.png" alt="Data Loading" loading="lazy" />
+                  <figcaption>Data Staging</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/merge_engine/visuals/screenshot_20260404_034314.png" alt="Merge Execution" loading="lazy" />
+                  <figcaption>Merge Operation</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/merge_engine/visuals/screenshot_20260404_034626.png" alt="Final Aggregated Output" loading="lazy" />
+                  <figcaption>Final Consolidation</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="project-gallery-block reveal">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Recovery Dashboards</span>
+                <h3>Visualizing the Aggregated Data</h3>
+                <p>
+                  These business intelligence charts demonstrate the direct outcomes of the Merge Engine, providing immediate boardroom-level visibility into revenue trends and product performance.
+                </p>
+              </div>
+              <div class="project-gallery">
+                <figure class="gallery-item">
+                  <img src="assets/projects/merge_engine/visuals/rev_by_country.png" alt="Revenue by Country" loading="lazy" />
+                  <figcaption>Global Segmentation</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/merge_engine/visuals/monthly_trend.png" alt="Sales Trend" loading="lazy" />
+                  <figcaption>Seasonality Audit</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-growth-workbook">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Detailed project view</span>
+                <h2>Comparative Growth Workbook</h2>
+              </div>
+              <a class="button button--secondary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry%20-%20Growth%20Workbook" data-loading-button>Start similar project</a>
+            </div>
+            <p>
+              This workbook focuses on comparative analysis: top products in the USA, top laptop revenue contributor,
+              and month-over-month revenue growth in a concise sheet designed for review speed.
+            </p>
+            <ul class="bullet-list">
+              <li>Highlights winning products inside one market</li>
+              <li>Compares country contribution to laptop revenue</li>
+              <li>Calculates growth percentage across reporting months</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">pro_mission_v4_report.xlsx</span>
+              <span class="tag">Growth Analysis</span>
+              <span class="tag">Excel</span>
+            </div>
+            <div class="project-gallery-block reveal">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Transformation Proof</span>
+                <h3>Visualizing the automated flow</h3>
+                <p>
+                  Every frame in this sequence captures the real-time bot operations, transitioning instantly from raw data input logic to the finalized Comparative Growth Workbook output.
+                </p>
+              </div>
+              <div class="project-gallery" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_pack/visuals/screenshot_20260404_043717.png" alt="Raw Data Source" loading="lazy" />
+                  <figcaption>Raw Data</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_pack/visuals/screenshot_20260404_043706.png" alt="Data Loading" loading="lazy" />
+                  <figcaption>Staging Data</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_pack/visuals/screenshot_20260404_043656.png" alt="SQL Execution" loading="lazy" />
+                  <figcaption>SQL Aggregation</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_pack/visuals/screenshot_20260404_043632.png" alt="Completed Data Output" loading="lazy" />
+                  <figcaption>Complete Data</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="project-gallery-block reveal">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Executive Charting</span>
+                <h3>Visualizing Month-Over-Month Growth</h3>
+                <p>
+                  This premium dark-mode visualization was dynamically rendered against the generated sales pipeline dataset, highlighting the precise revenue peaks without requiring an active Excel GUI.
+                </p>
+              </div>
+              <div class="project-gallery" style="grid-template-columns: 1fr;">
+                <figure class="gallery-item">
+                  <img src="assets/projects/growth_workbook/visuals/monthly_revenue_trend_dark.png" alt="Monthly Revenue Trend Chart" loading="lazy" style="max-height: 500px; object-fit: cover;" />
+                  <figcaption>Q1 Revenue Growth Trajectory</figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-xlookup-check">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Detailed project view</span>
+                <h2>XLOOKUP Readiness Check</h2>
+              </div>
+              <a class="button button--secondary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry%20-%20Workbook%20QA" data-loading-button>Start similar project</a>
+            </div>
+            <p>
+              This QA flow launches Excel, injects an XLOOKUP formula, validates support, and leaves a saved workbook
+              artifact so formula compatibility is confirmed before handoff.
+            </p>
+            <ul class="bullet-list">
+              <li>Tests the live Excel environment instead of assuming support</li>
+              <li>Saves a proof workbook after the compatibility check</li>
+              <li>Reduces risk before shipping formula-heavy files</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">XLOOKUP_TEST.xlsx</span>
+              <span class="tag">Compatibility QA</span>
+              <span class="tag">Excel</span>
+            </div>
+          </article>
+
+          <article class="project-detail reveal" id="project-customer-spend">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Detailed project view</span>
+                <h2>Customer Spend Merge Report</h2>
+              </div>
+              <a class="button button--secondary" href="mailto:nwaforlawrence17@gmail.com?subject=Project%20Inquiry%20-%20Customer%20Spend%20Report" data-loading-button>Start similar project</a>
+            </div>
+            <p>
+              This report merges order and customer tables, lays out a readable merged sheet, and pairs it with a simple
+              summary table so spending patterns can be reviewed quickly.
+            </p>
+            <ul class="bullet-list">
+              <li>Combines raw orders with customer profile information</li>
+              <li>Calculates total spend per customer</li>
+              <li>Formats merged output and summary tables for quick scanning</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Merged Order Report</span>
+              <span class="tag">Customer Analysis</span>
+              <span class="tag">Summary Tables</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <span class="eyebrow">Project library</span>
+          <h2>Structured work. Proven results. Clean handoff.</h2>
+          <p>
+            Automation and reporting solutions built for clarity, accuracy, and faster decisions.
+          </p>
+        </div>
+        <div class="site-footer__links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a href="mailto:nwaforlawrence17@gmail.com">nwaforlawrence17@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Image Modal Lightbox -->
+    <div class="image-modal" id="image-modal" aria-hidden="true">
+      <button class="image-modal__close" id="image-modal-close" aria-label="Close image">Close</button>
+      <img src="" alt="" class="image-modal__img" id="image-modal-img" />
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
