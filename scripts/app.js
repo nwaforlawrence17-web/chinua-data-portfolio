@@ -60,41 +60,41 @@
     if (canUseGsap) {
       window.gsap.registerPlugin(window.ScrollTrigger);
       revealItems.forEach((item) => {
-        if (item.classList.contains("is-visible")) return;
-
-        window.gsap.set(item, { autoAlpha: 0, y: 18, willChange: "transform,opacity" });
-        window.gsap.to(item, {
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.62,
-          ease: "power2.out",
-          clearProps: "transform,opacity,willChange",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 88%",
-            once: true,
-            onEnter: () => {
-              item.classList.add("is-visible");
-              triggerStatAnimation(item);
+        // --- 1. Initial Reveal Animation ---
+        if (!item.classList.contains("is-visible")) {
+          window.gsap.set(item, { autoAlpha: 0, y: 18, willChange: "transform,opacity" });
+          window.gsap.to(item, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.62,
+            ease: "power2.out",
+            clearProps: "transform,opacity,willChange",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 88%",
+              once: true,
+              onEnter: () => {
+                item.classList.add("is-visible");
+                triggerStatAnimation(item);
+              }
             }
-          }
-        });
+          });
+        }
       });
     } else if ("IntersectionObserver" in window) {
       revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-visible");
-          triggerStatAnimation(entry.target);
-          revealObserver.unobserve(entry.target);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            triggerStatAnimation(entry.target);
+          }
         });
       }, {
-        threshold: mobileOptimizedMotion ? 0.06 : 0.15,
-        rootMargin: mobileOptimizedMotion ? "0px 0px -6% 0px" : "0px"
+        threshold: [0, 0.1, 0.5, 0.9],
+        rootMargin: "0px"
       });
 
       revealItems.forEach((item) => {
-        if (item.classList.contains("is-visible")) return;
         item.style.willChange = "transform, opacity";
         revealObserver.observe(item);
       });

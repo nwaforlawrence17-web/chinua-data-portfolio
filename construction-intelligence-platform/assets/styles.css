@@ -1,0 +1,147 @@
+:root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-accent: #21262d;
+    --primary: #58a6ff;
+    --success: #3fb950;
+    --danger: #f85149;
+    --warning: #d29922;
+    --text-main: #c9d1d9;
+    --text-muted: #8b949e;
+    --glass: rgba(22, 27, 34, 0.75);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Outfit', sans-serif; 
+    background: var(--bg); 
+    color: var(--text-main); 
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    background: var(--surface);
+    border-right: 1px solid var(--surface-accent);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.brand h1 { font-size: 1.6rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 0.8rem; letter-spacing: -1px; }
+
+.filter-group { display: flex; flex-direction: column; gap: 0.8rem; }
+.filter-group label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+
+select {
+    background: var(--surface-accent);
+    border: 1px solid #30363d;
+    color: var(--text-main);
+    padding: 14px;
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    transition: 0.2s;
+}
+select:hover { border-color: var(--primary); }
+
+.status-badge {
+    margin-top: auto;
+    background: rgba(63, 185, 80, 0.1);
+    color: var(--success);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-align: center;
+    border: 1px solid rgba(63, 185, 80, 0.2);
+}
+
+/* Main Workspace */
+.main-workspace {
+    padding: 2.5rem 3rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: radial-gradient(circle at top right, #161b22, #0d1117);
+}
+
+.header { margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: flex-end; }
+.header h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -1px; }
+.header p { color: var(--text-muted); margin-top: 5px; font-size: 1.1rem; }
+
+/* KPI Cards */
+.kpi-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 1.5rem; 
+    margin-bottom: 3rem; 
+}
+
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--surface-accent);
+    padding: 1.8rem;
+    border-radius: 20px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+}
+.card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+.card-label { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; font-weight: 600; }
+.card-value { font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono'; color: #fff; }
+.card-footer { font-size: 0.8rem; margin-top: 15px; color: var(--text-muted); line-height: 1.4; border-top: 1px solid var(--surface-accent); padding-top: 12px; }
+
+/* Charts */
+.chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+.chart-box {
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid var(--surface-accent);
+    min-height: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Insights Panel */
+.insights-section {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+.insight-card {
+    background: var(--glass);
+    border: 1px solid var(--surface-accent);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+.insight-card h3 { 
+    color: var(--primary); 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 1rem; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.insight-card p { font-size: 1rem; line-height: 1.6; color: var(--text-main); }
+
+@media (max-width: 1024px) { 
+    .chart-row { grid-template-columns: 1fr; } 
+    body { grid-template-columns: 1fr; overflow-y: auto; height: auto; }
+    .sidebar { border-right: none; height: auto; padding: 1.5rem; }
+    .main-workspace { padding: 1.5rem; }
+}

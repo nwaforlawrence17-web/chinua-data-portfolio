@@ -33,6 +33,11 @@
   
   --success: hsl(145, 55%, 68%);
   --shadow: 0 32px 84px -12px rgba(0, 0, 0, 0.44);
+  
+  /* Simplified Theme Tokens */
+  --static-green: rgba(0, 255, 122, 0.05);
+  --static-green-line: rgba(0, 255, 122, 0.2);
+  
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -442,21 +447,30 @@ main {
 .process-card,
 .cta-band,
 .callout-box {
+  padding: 32px;
+  border-radius: var(--radius-xl);
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.hero__copy,
-.panel,
-.card,
-.project-card,
-.project-detail,
-.stat-card,
-.process-card,
-.cta-band,
-.callout-box {
+.hero__copy:hover,
+.panel:hover,
+.card:hover,
+.project-card:hover,
+.project-detail:hover,
+.stat-card:hover,
+.process-card:hover,
+.cta-band:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+/* Maintain original styling for top project cards to exclude from new behavior */
+.project-card {
   padding: 32px;
   border-radius: var(--radius-xl);
   border: 1px solid var(--line);
@@ -589,9 +603,16 @@ p {
   gap: 4px;
   padding: 14px 16px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--line);
+  border: 1px solid var(--static-green-line);
   background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 10px var(--static-green);
   transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.proof-list li.is-glow-focus,
+.proof-list li:active {
+  border-color: var(--bright-orange);
+  box-shadow: 0 0 25px rgba(255, 122, 0, 0.5);
 }
 
 .proof-list li:hover {
@@ -717,11 +738,19 @@ p {
   margin-top: 18px;
   padding: 30px;
   border-radius: 30px;
-  border: 1px solid rgba(95, 212, 193, 0.18);
+  border: 1px solid var(--static-green-line);
   background:
     radial-gradient(circle at top right, rgba(241, 180, 91, 0.12), transparent 34%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.2), 0 0 15px var(--static-green);
+  transition: border-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+.project-video-block.is-glow-focus,
+.project-video-block:active {
+  border-color: var(--bright-orange);
+  box-shadow: var(--orange-ring-glow);
+  animation: lit-up-pulse 1.8s infinite alternate;
 }
 
 .project-video__copy {
@@ -756,6 +785,8 @@ p {
   border-radius: var(--radius-xl);
   border: 1px solid var(--line);
   background: var(--surface-soft);
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
 .project-gallery {
@@ -776,7 +807,8 @@ p {
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: var(--radius-md);
-  border: 1px solid var(--line);
+  border: 1px solid var(--orange-line);
+  box-shadow: 0 4px 18px var(--orange-glow);
   transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), border-color 0.4s ease;
 }
 
@@ -810,8 +842,8 @@ p {
   padding-right: 24px;
   color: var(--text);
   background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(95, 212, 193, 0.22);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+  border-color: var(--orange-line);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14), 0 4px 12px var(--orange-glow);
 }
 
 .button--file:hover,
@@ -931,12 +963,12 @@ p {
 .field textarea {
   width: 100%;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 122, 0, 0.40);
+  border: 1px solid var(--orange-line);
   background: rgba(255, 122, 0, 0.03);
   color: var(--text);
   padding: 14px 16px;
   resize: vertical;
-  box-shadow: 0 0 0 0 rgba(255, 122, 0, 0);
+  box-shadow: 0 0 0 0 rgba(255, 122, 0, 0), 0 2px 8px var(--glow-orange);
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
@@ -1473,6 +1505,43 @@ body[data-theme="light"] .field textarea {
   }
 }
 
+/* Terminal Snippet Styles */
+.terminal-snippet {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #c9d1d9;
+  overflow-x: auto;
+  position: relative;
+}
+
+.terminal-snippet::before {
+  content: "terminal — bash";
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.5rem;
+}
+
+.terminal-snippet code {
+  color: inherit;
+  background: none;
+  padding: 0;
+}
+
+.terminal-success { color: #3fb950; }
+.terminal-warning { color: #d29922; }
+.terminal-info { color: #58a6ff; }
+
 /* --- Image Modal Lightbox --- */
 .image-modal {
   position: fixed;
@@ -1793,4 +1862,48 @@ body[data-theme="light"] .field textarea {
   body[data-page="projects"] .project-detail .video-buttons {
     display: none !important;
   }
+}
+/* System Engine Status Badges */
+.system-engine-status {
+  margin: 24px 0;
+  padding: 18px 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 3px solid var(--static-green-line);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.status-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 122, 0.15);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #00FF7A;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00FF7A;
+  animation: status-pulse 1.5s infinite alternate;
+}
+
+@keyframes status-pulse {
+  from { opacity: 0.4; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1.1); box-shadow: 0 0 15px #00FF7A; }
 }

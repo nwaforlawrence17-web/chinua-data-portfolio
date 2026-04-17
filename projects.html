@@ -167,15 +167,15 @@
               <a class="button button--secondary" href="#project-xlookup-check">XLOOK UP</a>
             </article>
             <article class="project-card project-card--dynamic reveal" style="--delay: 480ms">
-              <span class="card__eyebrow">data_report.py</span>
-              <h3>Customer Spend Report</h3>
-              <p>Merged order and customer data into a readable workbook plus summary table for fast review.</p>
+              <span class="card__eyebrow">construction_pipeline.py</span>
+              <h3>Construction Intelligence Platform</h3>
+              <p>High-performance portfolio risk dashboard managing 2,240 global project records with multi-currency USD normalization.</p>
               <div class="tag-row">
-                <span class="tag">Customers</span>
-                <span class="tag">Summary</span>
-                <span class="tag">Excel</span>
+                <span class="tag">Python (Pandas)</span>
+                <span class="tag">Plotly.js</span>
+                <span class="tag">Portfolio Risk</span>
               </div>
-              <a class="button button--secondary" href="#project-customer-spend">Customer Spend Report</a>
+              <a class="button button--secondary" href="#project-construction-intel">Construction Intelligence Platform</a>
             </article>
           </div>
         </div>
@@ -247,7 +247,10 @@
                   muted
                   playsinline
                   preload="metadata"
-                ></video>
+                  style="width: 100%; border-radius: 28px;"
+                >
+                  Your browser does not support the video tag.
+                </video>
                 <div class="video-buttons">
                    <a class="button button--file" href="assets/projects/revenue_system/video/_screenshots/raw_usa.png">
                     <span class="button__icon">IMG</span>
@@ -536,26 +539,85 @@
             </div>
           </article>
 
-          <article class="project-detail reveal" id="project-customer-spend">
+          <article class="project-detail reveal" id="project-construction-intel">
             <div class="project-detail__head">
               <div>
-                <span class="eyebrow">Detailed project view</span>
-                <h2>Customer Spend Report</h2>
+                <span class="eyebrow">Flagship Data Architecture</span>
+                <h2>Construction Intelligence Platform</h2>
               </div>
             </div>
-            <p>
-              This report merges order and customer tables, lays out a readable merged sheet, and pairs it with a simple
-              summary table so spending patterns can be reviewed quickly.
-            </p>
-            <ul class="bullet-list">
-              <li>Combines raw orders with customer profile information</li>
-              <li>Calculates total spend per customer</li>
-              <li>Formats merged output and summary tables for quick scanning</li>
-            </ul>
+            
+            <!-- Phase 1: The Transformation Gallery -->
+            <div class="project-gallery-block">
+              <span class="eyebrow">The Data Transformation Flow</span>
+              <div class="project-gallery project-gallery--three">
+                <figure class="gallery-item">
+                  <img src="assets/projects/construction_intel/visuals/raw_data_proof.png" alt="Raw unformatted Excel data with mixed currencies" />
+                  <figcaption>01. Raw Entropy</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/construction_intel/visuals/cleaned_data_proof.png" alt="Normalized and structured operational data" />
+                  <figcaption>02. Engineering Clarity</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/construction_intel/visuals/dashboard_mockup.png" alt="Flat UI software interface mockup for executive dashboard" />
+                  <figcaption>03. Final Interface (Flat UI)</figcaption>
+                </figure>
+              </div>
+              <p class="gallery-note">Click any image to enlarge and inspect the transformation details.</p>
+            </div>
+
+            <!-- Narrative: The Engineering Journey -->
+            <div class="content-block">
+              <span class="eyebrow">Transformation Narrative</span>
+              <p>
+                From 2,240 rows of multi-region currency chaos to a unified, executive-grade intelligence platform. This project demonstrates full-stack data engineering: from raw ETL pipelines to premium glassmorphism visualization.
+              </p>
+            </div>
+
             <div class="tag-row">
-              <span class="tag">Merged Order Report</span>
-              <span class="tag">Customer Analysis</span>
-              <span class="tag">Summary Tables</span>
+              <span class="tag">raw_data.csv</span>
+              <span class="tag">ETL Pipeline</span>
+              <span class="tag">Strategy Report</span>
+            </div>
+
+            <!-- Technical Proof: Automated Testing -->
+            <div class="content-block">
+              <span class="eyebrow">Technical Rigor: Automated Testing</span>
+              <h3>Data Integrity Verification</h3>
+              <p>
+                To ensure 100% accuracy in financial reporting across NGN, ZAR, and USD, I implemented a comprehensive 
+                <span class="terminal-info">pytest</span> suite covering 11 critical data transformation rules.
+              </p>
+              <div class="terminal-snippet">
+                <code>
+<span class="terminal-info">rootdir: /construction-intelligence-platform</span>
+<span class="terminal-info">collected 11 items</span>
+
+tests/test_calculations.py <span class="terminal-success">....</span>                      [ 36%]
+tests/test_cleaning.py <span class="terminal-success">...</span>                          [ 63%]
+tests/test_currency.py <span class="terminal-success">....</span>                          [100%]
+
+<span class="terminal-success">================= 11 passed in 0.12s =================</span>
+                </code>
+              </div>
+            </div>
+
+            <!-- System Engine: Automation Proof -->
+            <div class="system-engine-status">
+              <span class="eyebrow">System Engine Status</span>
+              <div class="status-badge-row">
+                <span class="status-badge"><span class="pulse-dot"></span> Source: Local CSV</span>
+                <span class="status-badge">Engine: Python / Pandas</span>
+                <span class="status-badge">Refresh: Automated</span>
+              </div>
+            </div>
+
+            <!-- Phase 3: The Result -->
+            <div class="project-card__actions--detail button-row">
+              <span class="button-row__label">Phase 03: The Result</span>
+              <a class="button button--primary" href="./construction-intelligence-platform/dashboard/index.html">View Cleaned Dashboard</a>
+              <a class="button button--secondary" href="./construction-intelligence-platform/reports/executive_summary.md">Summary Report</a>
             </div>
           </article>
         </div>
