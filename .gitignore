@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$python.exe
+.env
+.venv
+env/
+venv/
+.streamlit/
+.vscode/
+*.xlsx
+# Exclude raw data if you want to keep the repo small, but usually we keep the cleaned csv
+/01_RAW_DATA/
+/03_LOOKUP_TABLES/
+/04_REPORTS/
