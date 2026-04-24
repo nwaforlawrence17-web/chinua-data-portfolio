@@ -178,7 +178,8 @@
                 paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
                 font: { color: '#8b949e', family: 'Outfit', size: 11 },
                 margin: { t: 60, b: 60, l: 120, r: 20 },
-                xaxis: { gridcolor: '#21262d' }, yaxis: { gridcolor: '#21262d' }
+                xaxis: { gridcolor: '#21262d', automargin: true }, yaxis: { gridcolor: '#21262d', automargin: true },
+                autosize: true
             };
 
             // Fix "KEN" issue by adding Contractor name to labels
@@ -187,7 +188,7 @@
                 x: sorted.map(d => d.Cost_Overrun_USD), 
                 y: sorted.map(d => `${d.Contractor_Name} (${d.Project_ID})`),
                 type: 'bar', orientation: 'h', marker: { color: '#f85149' }
-            }], { ...theme, title: 'TOP LEAKAGE NODES (BY ENTITY)' });
+            }], { ...theme, title: 'TOP LEAKAGE NODES (BY ENTITY)' }, { responsive: true });
 
             const geo = {}; data.forEach(d => geo[d.Country] = (geo[d.Country]||0) + Math.max(0, safeNum(d.Cost_Overrun_USD)));
             // ENLARGED DOUGHNUT
@@ -198,21 +199,21 @@
                 ...theme, 
                 title: 'REGIONAL RISK DISTRIBUTION',
                 margin: { t: 40, b: 40, l: 40, r: 40 } // Tightened margins to make pie bigger
-            });
+            }, { responsive: true });
 
             const classes = [...new Set(data.map(d => d.Equipment_Type))];
             const traces = classes.map(t => ({
                 y: data.filter(d => d.Equipment_Type === t).map(d => d.Efficiency_Ratio),
                 name: t, type: 'box', marker: { color: '#3fb950' }
             }));
-            Plotly.newPlot('chartEfficiencyDist', traces, { ...theme, title: 'ASSET UTILIZATION INDICES' });
+            Plotly.newPlot('chartEfficiencyDist', traces, { ...theme, title: 'ASSET UTILIZATION INDICES' }, { responsive: true });
 
             const limit = 600;
             const sampled = data.length > limit ? data.filter((_,i) => i % Math.ceil(data.length/limit) === 0) : data;
             Plotly.newPlot('chartInteractiveScatter', [{
                 x: sampled.map(d => d.Actual_Cost_USD), y: sampled.map(d => d.Efficiency_Ratio),
                 mode: 'markers', marker: { size: 8, color: sampled.map(d => d.Cost_Overrun_USD > 0 ? '#f85149' : '#3fb950'), opacity: 0.6 }
-            }], { ...theme, title: 'EXPENDITURE VS PERFORMANCE DENSITY' });
+            }], { ...theme, title: 'EXPENDITURE VS PERFORMANCE DENSITY' }, { responsive: true });
         }
 
         window.onload = init;

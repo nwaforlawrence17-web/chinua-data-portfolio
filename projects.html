@@ -103,6 +103,26 @@
               </div>
             </article>
 
+            <article class="project-card project-card--featured project-card--dynamic reveal" style="--delay: 130ms">
+              <div class="project-card__top">
+                <span class="card__eyebrow">interactive bi dashboard</span>
+                <span class="project-card__badge">Live</span>
+              </div>
+              <h3>xlookup Retail_Sales_Project</h3>
+              <p>
+                A high-performance Streamlit dashboard visualizing regional sales trends, product performance, 
+                and data quality metrics derived from the cleaned retail dataset.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Streamlit</span>
+                <span class="tag">Plotly</span>
+                <span class="tag">Business Intelligence</span>
+              </div>
+              <div class="project-card__actions">
+                <a class="button button--primary" href="#project-retail-dashboard">Launch Interactive App</a>
+              </div>
+            </article>
+
             <article class="project-card project-card--featured project-card--dynamic reveal" style="--delay: 140ms">
               <div class="project-card__top">
                 <span class="card__eyebrow">Enterprise Data Recovery</span>
@@ -154,17 +174,6 @@
                 <span class="tag">Comparisons</span>
               </div>
               <a class="button button--secondary" href="#project-growth-workbook">Comparative Growth Workbook</a>
-            </article>
-            <article class="project-card project-card--dynamic reveal" style="--delay: 400ms">
-              <span class="card__eyebrow">check_xlookup.py</span>
-              <h3>XLOOK UP</h3>
-              <p>Compatibility testing workflow for Excel formula support before workbook delivery and handoff.</p>
-              <div class="tag-row">
-                <span class="tag">QA</span>
-                <span class="tag">XLOOKUP</span>
-                <span class="tag">Compatibility</span>
-              </div>
-              <a class="button button--secondary" href="#project-xlookup-check">XLOOK UP</a>
             </article>
             <article class="project-card project-card--dynamic reveal" style="--delay: 480ms">
               <span class="card__eyebrow">construction_pipeline.py</span>
@@ -293,6 +302,40 @@
             </div>
           </article>
 
+          <article class="project-detail project-detail--featured reveal" id="project-retail-dashboard">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Interactive Live Demo</span>
+                <h2>xlookup Retail_Sales_Project</h2>
+              </div>
+              <a class="button button--primary" href="https://github.com/nwaforlawrence17-web/xlookup-retail-sales-intelligence-platform" target="_blank">View Repo on GitHub</a>
+            </div>
+            <p>
+              This interactive dashboard provides real-time insights into the cleaned retail sales data. 
+              It features executive-level KPIs, regional breakdown charts, and a side-by-side comparison of the 
+              dataset's state before and after the cleaning pipeline.
+            </p>
+            <div class="dashboard-container" style="margin-top: 2rem; background: #161b22; border-radius: 12px; border: 1px solid #30363d; overflow: hidden;">
+              <div class="dashboard-header" style="padding: 1rem; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.85rem; color: #8b949e; letter-spacing: 0.05em; text-transform: uppercase;">Live Deployment: Streamlit Cloud</span>
+                <span class="status-badge"><span class="pulse-dot"></span> Active Engine</span>
+              </div>
+              <iframe 
+                src="https://xlookup-retail-sales-intelligence-platform-4qgd4e77nohowm9vvbh.streamlit.app/?embedded=true" 
+                width="100%" 
+                height="800px" 
+                frameborder="0" 
+                style="display: block; background: #0d1117;">
+              </iframe>
+            </div>
+            <div class="tag-row" style="margin-top: 1.5rem;">
+              <span class="tag">Python</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">Pandas</span>
+            </div>
+          </article>
+
           <article class="project-detail reveal" id="project-extreme-recovery">
             <div class="project-detail__head">
               <div>
@@ -349,11 +392,46 @@
                    quality score reached after the Absolute Perfection cycle.
                 </p>
               </div>
-              <div class="project-gallery">
-                 <figure class="gallery-item" style="grid-column: span 3;">
-                  <img src="assets/projects/extreme_recovery/visuals/handoff_report.png" alt="Final Handoff Report" loading="lazy" />
-                  <figcaption>Final Executive Handoff & Quality Audit</figcaption>
-                </figure>
+              <div class="terminal-snippet" style="margin-top: 1.5rem; text-align: left;">
+                <code>
+<span style="color: #58a6ff;"># EXECUTIVE CLIENT HANDOFF: Extreme Data Recovery v2</span>
+**Project Status:** 100% Complete | **Data Integrity:** 100% Perfect | **Senior Analyst:** Chinua Analytics
+
+---
+
+<span style="color: #58a6ff;">## 🌍 1. GLOBAL REVENUE SEGMENTATION</span>
+The following analysis identifies the primary revenue drivers across our multi-regional business model. Nigeria currently stands as the high-growth leader, contributing significantly more to the global total than the USA or UK.
+
+![Revenue by Country](assets/projects/extreme_recovery/visuals/revenue_chart.png)
+
+> [!TIP]
+> **Strategic Insight:** High-growth investment should be prioritized for the Nigeria region, while the UK and USA require targeted "Re-Engagement" marketing campaigns.
+
+---
+
+<span style="color: #58a6ff;">## 📈 2. SEASONAL SALES TRENDS</span>
+Our time-series analysis reveals a 100% predictable seasonal surge. Peak revenue is concentrated in the Q4 window, specifically late Q4.
+
+![Sales Trend Peaks](assets/projects/extreme_recovery/visuals/trend_chart.png)
+
+---
+
+<span style="color: #58a6ff;">## 🛒 3. PRODUCT PORTFOLIO AUDIT</span>
+Electronics remain the core engine of our business, driving nearly 20% of all global revenue. This is followed closely by the Fashion and Health categories.
+
+![Category Contribution](assets/projects/extreme_recovery/visuals/product_chart.png)
+
+---
+
+<span style="color: #58a6ff;">## 🛡️ 4. DATA INTEGRITY AUDIT (PROOF OF WORK)</span>
+Every single record has been processed through the **Absolute Perfection (v2)** cycle. All duplicates have been purged, and all phone numbers/emails have been normalized to world-class standards.
+
+| Metric | Cleaned Rows | Quality Score |
+| :--- | :--- | :--- |
+| **Total Processed** | 20,500 | 100% |
+| **Fuzzy Duplicates** | 2,518 Purged | 100% |
+| **Integrity Checks** | Passed | 100% |
+                </code>
               </div>
             </div>
           </article>
@@ -516,28 +594,6 @@
             </div>
           </article>
 
-          <article class="project-detail reveal" id="project-xlookup-check">
-            <div class="project-detail__head">
-              <div>
-                <span class="eyebrow">Detailed project view</span>
-                <h2>XLOOK UP</h2>
-              </div>
-            </div>
-            <p>
-              This QA flow launches Excel, injects an XLOOKUP formula, validates support, and leaves a saved workbook
-              artifact so formula compatibility is confirmed before handoff.
-            </p>
-            <ul class="bullet-list">
-              <li>Tests the live Excel environment instead of assuming support</li>
-              <li>Saves a proof workbook after the compatibility check</li>
-              <li>Reduces risk before shipping formula-heavy files</li>
-            </ul>
-            <div class="tag-row">
-              <span class="tag">XLOOKUP_TEST.xlsx</span>
-              <span class="tag">Compatibility QA</span>
-              <span class="tag">Excel</span>
-            </div>
-          </article>
 
           <article class="project-detail reveal" id="project-construction-intel">
             <div class="project-detail__head">
