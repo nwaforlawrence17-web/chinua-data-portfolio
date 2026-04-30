@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Briefing | Revenue Analytics SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <style>
+        :root {
+            --report-accent: #38bdf8;
+            --report-danger: #fb7185;
+            --report-success: #34d399;
+            --report-warning: #fbbf24;
+        }
+
+        .report-header { 
+            border-bottom: 2px solid var(--border); 
+            padding-bottom: 1.5rem; 
+            margin-bottom: 2.5rem; 
+        }
+        
+        .executive-summary {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border-left: 6px solid var(--report-accent);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .summary-points {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .summary-item h4 { color: var(--report-accent); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .summary-item p { font-size: 1.1rem; font-weight: 500; color: var(--text-main); }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .insight-block {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            transition: transform 0.2s;
+        }
+
+        .insight-block:hover { transform: translateY(-4px); border-color: var(--report-accent); }
+
+        .insight-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .insight-badge { padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+        .badge-rev { background: rgba(56, 189, 248, 0.1); color: var(--report-accent); }
+        .badge-risk { background: rgba(251, 113, 133, 0.1); color: var(--report-danger); }
+        .badge-opp { background: rgba(52, 211, 153, 0.1); color: var(--report-success); }
+
+        .insight-content h4 { font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .insight-meta { display: grid; grid-template-columns: 1fr; gap: 0.75rem; font-size: 0.9rem; }
+        .meta-item { display: flex; gap: 0.5rem; }
+        .meta-label { color: var(--report-accent); font-weight: 700; min-width: 70px; }
+        .meta-text { color: var(--text-muted); }
+
+        .recommendation-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        .rec-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .rec-item:last-child { border-bottom: none; }
+        .rec-number { 
+            background: var(--report-accent); 
+            color: white; 
+            width: 32px; height: 32px; 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 50%; 
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .pipeline-overview {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-tertiary);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pipeline-step { text-align: center; flex: 1; position: relative; }
+        .pipeline-step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -10%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--border);
+            font-size: 1.5rem;
+        }
+
+        @media print {
+            .sidebar, .top-actions { display: none !important; }
+            .main-content { margin-left: 0 !important; width: 100% !important; padding: 0 !important; }
+            .executive-summary { border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon"><i data-lucide="bar-chart-3"></i></div>
+                <span class="logo-text">RevAnalytics</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+                <a href="revenue.html" class="nav-item"><i data-lucide="trending-up"></i><span>Revenue</span></a>
+                <a href="customers.html" class="nav-item"><i data-lucide="users"></i><span>Customers</span></a>
+                <a href="products.html" class="nav-item"><i data-lucide="package"></i><span>Products</span></a>
+                <a href="marketing.html" class="nav-item"><i data-lucide="megaphone"></i><span>Marketing</span></a>
+                <a href="executive.html" class="nav-item active"><i data-lucide="file-text"></i><span>Executive Briefing</span></a>
+            </nav>
+            <div class="sidebar-footer"><div class="status-indicator"><span class="dot"></span><span>Live Database</span></div></div>
+        </aside>
+
+        <main class="main-content fade-in">
+            <header class="">
+                    
+                <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                    <div>
+                        <span style="color: var(--report-accent); font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.1em;">CONFIDENTIAL | Q2 2026</span>
+                        <h1 style="font-size: 2.5rem; margin-top: 0.5rem;">Executive Briefing</h1>
+                    </div>
+                    <div class="top-actions">
+                        <button class="card" style="padding: 0.75rem 1.5rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;" onclick="window.print()">
+                            <i data-lucide="printer" style="width:18px;"></i>
+                            <span>Print Report</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <section class="executive-summary">
+                <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Executive Summary</h2>
+                <div class="summary-points">
+                    <div class="summary-item">
+                        <h4>Revenue Stability</h4>
+                        <p>Consistent growth across direct channels, but regional concentration remains a key vulnerability.</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Portfolio Health</h4>
+                        <p>Core products maintain healthy margins; expansion into higher-margin accessories is accelerating.</p>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Customer Asset</h4>
+                        <p>Retention of high-value segments is the primary driver of predictable quarterly performance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-grid">
+                <div>
+                    <h3 class="section-title">Critical Strategic Insights</h3>
+                    
+                    <div class="insight-block">
+                        <div class="insight-header">
+                            <span class="insight-badge badge-rev">Financial</span>
+                            <h4>Revenue Concentration Risk</h4>
+                        </div>
+                        <div class="insight-content">
+                            <div class="insight-meta">
+                                <div class="meta-item"><span class="meta-label">STATUS</span><span class="meta-text">70% of revenue originates from North America. While currently stable, this creates high exposure to regional economic volatility.</span></div>
+                                <div class="meta-item"><span class="meta-label">IMPACT</span><span class="meta-text">Market-specific downturns could disproportionately impact global targets.</span></div>
+                                <div class="meta-item"><span class="meta-label">ACTION</span><span class="meta-text">Aggressively reallocate marketing spend toward under-penetrated EMEA markets to decentralize revenue risk.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-block">
+                        <div class="insight-header">
+                            <span class="insight-badge badge-risk">Operational</span>
+                            <h4>High-Value Cohort Dependency</h4>
+                        </div>
+                        <div class="insight-content">
+                            <div class="insight-meta">
+                                <div class="meta-item"><span class="meta-label">STATUS</span><span class="meta-text">Top 20% of the customer base generates over 60% of total revenue.</span></div>
+                                <div class="meta-item"><span class="meta-label">IMPACT</span><span class="meta-text">Loss of a small group of key clients would significantly destabilize quarterly projections.</span></div>
+                                <div class="meta-item"><span class="meta-label">ACTION</span><span class="meta-text">Establish a 'White Glove' account management program to secure long-term retention of top-tier customers.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-block">
+                        <div class="insight-header">
+                            <span class="insight-badge badge-opp">Opportunity</span>
+                            <h4>Direct Channel Profitability</h4>
+                        </div>
+                        <div class="insight-content">
+                            <div class="insight-meta">
+                                <div class="meta-item"><span class="meta-label">STATUS</span><span class="meta-text">Direct-to-consumer sales yield 15% higher net margins than partner-driven distribution.</span></div>
+                                <div class="meta-item"><span class="meta-label">IMPACT</span><span class="meta-text">Over-reliance on partners is diluting overall bottom-line profitability.</span></div>
+                                <div class="meta-item"><span class="meta-label">ACTION</span><span class="meta-text">Pivot partner incentives toward high-volume, low-margin inventory while prioritizing direct channels for premium product launches.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="section-title">Strategic Roadmap</h3>
+                    <div class="recommendation-card">
+                        <div class="rec-item">
+                            <div class="rec-number">1</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem;">Market Diversification</h4>
+                                <p style="font-size: 0.875rem; color: var(--text-muted);">Execute EMEA pilot campaigns to reduce North American revenue concentration below 60% by year-end.</p>
+                            </div>
+                        </div>
+                        <div class="rec-item">
+                            <div class="rec-number">2</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem;">Loyalty Program Launch</h4>
+                                <p style="font-size: 0.875rem; color: var(--text-muted);">Implement an invite-only loyalty tier for 'High Value' customers to mitigate churn risk.</p>
+                            </div>
+                        </div>
+                        <div class="rec-item">
+                            <div class="rec-number">3</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem;">Pricing Optimization</h4>
+                                <p style="font-size: 0.875rem; color: var(--text-muted);">Deploy dynamic pricing on high-volume accessories to recover margin lost to rising logistics costs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title" style="margin-top: 2rem;">Data Infrastructure</h3>
+                    <div class="card" style="padding: 1.5rem; font-size: 0.875rem;">
+                        <p style="margin-bottom: 1rem; color: var(--text-muted);">The intelligence driving this report is powered by a fully automated ETL pipeline:</p>
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width:16px; color: var(--report-success);"></i><span>PostgreSQL Data Integrity</span></div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width:16px; color: var(--report-success);"></i><span>Python Automated Aggregation</span></div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle-2" style="width:16px; color: var(--report-success);"></i><span>Static JSON High-Speed Delivery</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="assets/js/appData.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+
+
+
+

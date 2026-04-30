@@ -300,16 +300,16 @@ body:not([data-page="home"]) .theme-toggle {
   color: #fff;
   background: #ff7a00;
   border-color: #ff7a00;
-  box-shadow: 0 4px 16px rgba(255, 122, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
   outline: none;
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
   color: #fff;
-  background: #FF7A00;
-  border-color: #FF7A00;
-  box-shadow: 0 4px 16px rgba(255, 122, 0, 0.25);
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
   outline: none;
 }
 
@@ -324,7 +324,7 @@ body:not([data-page="home"]) .theme-toggle {
   color: #fff;
   background: #FF7A00;
   border-color: #FF7A00;
-  box-shadow: 0 4px 16px rgba(255, 122, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
   outline: none;
 }
 
@@ -359,10 +359,10 @@ body:not([data-page="home"]) .theme-toggle {
 
 .button:hover,
 .button:focus-visible {
-  background: #FF7A00 !important;
+  background: var(--accent) !important;
   color: #fff !important;
-  border-color: #FF7A00 !important;
-  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.28) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.28) !important;
   transform: translateY(-2px);
   outline: none;
 }
@@ -567,15 +567,15 @@ p {
 }
 
 .stat-card:hover {
-  background: linear-gradient(135deg, rgba(255, 122, 0, 0.04), rgba(255, 122, 0, 0.01)), var(--surface) !important;
-  border-color: rgba(255, 122, 0, 0.45) !important;
-  box-shadow: 0 16px 40px rgba(255, 122, 0, 0.12) !important;
+  background: linear-gradient(135deg, rgba(0, 255, 122, 0.04), rgba(0, 255, 122, 0.01)), var(--surface) !important;
+  border-color: rgba(0, 255, 122, 0.45) !important;
+  box-shadow: 0 16px 40px rgba(0, 255, 122, 0.12) !important;
   transform: translateY(-2px);
   cursor: pointer;
 }
 
 .stat-card:hover strong {
-  color: #FF7A00;
+  color: var(--accent);
   transition: color 0.3s ease;
 }
 
@@ -616,15 +616,15 @@ p {
 }
 
 .proof-list li:hover {
-  background: linear-gradient(135deg, rgba(255, 122, 0, 0.04), rgba(255, 122, 0, 0.01)), var(--surface) !important;
-  border-color: rgba(255, 122, 0, 0.45) !important;
-  box-shadow: 0 16px 40px rgba(255, 122, 0, 0.12) !important;
+  background: linear-gradient(135deg, rgba(0, 255, 122, 0.04), rgba(0, 255, 122, 0.01)), var(--surface) !important;
+  border-color: rgba(0, 255, 122, 0.45) !important;
+  box-shadow: 0 16px 40px rgba(0, 255, 122, 0.12) !important;
   transform: translateY(-2px);
   cursor: pointer;
 }
 
 .proof-list li:hover strong {
-  color: #FF7A00;
+  color: var(--accent);
   transition: color 0.3s ease;
 }
 
@@ -991,9 +991,9 @@ body[data-theme="light"] .field textarea {
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  border-color: #FF7A00;
-  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.22), 0 8px 24px rgba(255, 122, 0, 0.12);
-  background: rgba(255, 122, 0, 0.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.22), 0 8px 24px rgba(16, 185, 129, 0.12);
+  background: rgba(16, 185, 129, 0.05);
 }
 
 .form-actions {
@@ -1605,16 +1605,16 @@ body[data-theme="light"] .field textarea {
 }
 
 .project-card--dynamic:hover {
-  background: linear-gradient(135deg, rgba(255, 122, 0, 0.04), rgba(255, 122, 0, 0.01)), var(--surface) !important;
-  border-color: rgba(255, 122, 0, 0.45) !important;
-  box-shadow: 0 16px 40px rgba(255, 122, 0, 0.12) !important;
+  background: linear-gradient(135deg, rgba(0, 255, 122, 0.04), rgba(0, 255, 122, 0.01)), var(--surface) !important;
+  border-color: rgba(0, 255, 122, 0.45) !important;
+  box-shadow: 0 16px 40px rgba(0, 255, 122, 0.12) !important;
 }
 
 .project-card--dynamic:hover .button--secondary {
-  background: #FF7A00 !important;
+  background: var(--accent) !important;
   color: #fff !important;
-  border-color: #FF7A00 !important;
-  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.28) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.28) !important;
   transform: translateY(-2px);
 }
 

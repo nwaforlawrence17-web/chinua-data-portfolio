@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers | Revenue Analytics SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon"><i data-lucide="bar-chart-3"></i></div>
+                <span class="logo-text">RevAnalytics</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+                <a href="revenue.html" class="nav-item"><i data-lucide="trending-up"></i><span>Revenue</span></a>
+                <a href="customers.html" class="nav-item active"><i data-lucide="users"></i><span>Customers</span></a>
+                <a href="products.html" class="nav-item"><i data-lucide="package"></i><span>Products</span></a>
+                
+                <a href="executive.html" class="nav-item"><i data-lucide="file-text"></i><span>Executive Report</span></a>
+            </nav>
+            <div class="sidebar-footer"><div class="status-indicator"><span class="dot"></span><span>Live Database</span></div></div>
+        </aside>
+
+        <main class="main-content fade-in">
+            <header>
+                <div class="header-main">
+                    <div class="confidential-tag">CUSTOMER SEGMENTATION | Q2 2026</div>
+                    <h1>Customer<br>Insights</h1>
+                </div>
+                <div class="top-actions">
+                    <button class="theme-toggle" id="themeToggle"><i data-lucide="sun"></i></button>
+                </div>
+            </header>
+
+            <div class="customer-grid">
+                <div class="card">
+                    <h3 class="section-title">Customer Segmentation</h3>
+                    <p style="color: var(--text-muted); font-size: 0.75rem; margin-top: -1rem; margin-bottom: 1.5rem;">
+                        LTV Segments: 
+                        <span style="color: var(--accent-green); font-weight: 600;">High (>$5k)</span>, 
+                        <span style="color: var(--accent-blue); font-weight: 600;">Mid ($1k-$5k)</span>, 
+                        <span style="color: var(--text-muted);">Low (<$1k)</span>.
+                    </p>
+                    <div id="customerSegmentChart" class="chart-container" style="min-height: 350px;"></div>
+                </div>
+
+                <div class="card">
+                    <h3 class="section-title">Revenue by Country (Global Map)</h3>
+                    <div id="countryMapChart" class="chart-container" style="min-height: 500px;"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="section-title">Top 10 Customers</h3>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;" id="customerTable">
+                        <thead>
+                            <tr style="text-align: left; border-bottom: 1px solid var(--border); color: var(--text-muted);">
+                                <th style="padding: 1rem;">Customer Name</th>
+                                <th style="padding: 1rem;">Country</th>
+                                <th style="padding: 1rem;">Orders</th>
+                                <th style="padding: 1rem;">Total Spend</th>
+                                <th style="padding: 1rem;">Segment</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customerTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/appData.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+

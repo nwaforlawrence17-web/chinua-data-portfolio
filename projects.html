@@ -71,15 +71,15 @@
           <!-- Duplicate one .project-card and one matching .project-detail block below to add a future project. -->
           <div class="card-grid card-grid--three">
             <article class="project-card project-card--dynamic reveal" style="--delay: 80ms">
-              <span class="card__eyebrow">professional_sales_analysis.py</span>
-              <h3>Senior Sales Analysis Report</h3>
-              <p>Data cleanup, date validation, pivot analysis, and executive-friendly workbook output.</p>
+              <span class="card__eyebrow">sql_automation_pipeline.py</span>
+              <h3>SQL Automation and Revenue Analytics</h3>
+              <p>Data cleanup, SQL-driven revenue mapping, and executive-friendly dashboard output.</p>
               <div class="tag-row">
+                <span class="tag">SQL</span>
                 <span class="tag">Pandas</span>
-                <span class="tag">xlwings</span>
-                <span class="tag">Excel</span>
+                <span class="tag">Revenue</span>
               </div>
-              <a class="button button--secondary" href="#project-sales-analysis">Senior Sales Analysis Report</a>
+              <a class="button button--secondary" href="#project-sales-analysis">SQL Automation and Revenue Analytics</a>
             </article>
 
             <!-- RE-INSERTED CLEAN VERSION -->
@@ -143,15 +143,18 @@
               </div>
             </article>
             <article class="project-card project-card--dynamic reveal" style="--delay: 160ms">
-              <span class="card__eyebrow">sql_mission.py</span>
-              <h3>Mission SQL Revenue Pack</h3>
-              <p>Customer merges, country revenue totals, top-customer ranking, and monthly trend reporting.</p>
+              <span class="card__eyebrow">powerbi_pipeline.pbix</span>
+              <h3>PowerBI ETL Automation</h3>
+              <p>
+                End-to-end data transformation pipeline leveraging Power Query and DAX to 
+                automate regional revenue aggregation and interactive performance reporting.
+              </p>
               <div class="tag-row">
-                <span class="tag">Excel</span>
-                <span class="tag">Revenue</span>
-                <span class="tag">Merges</span>
+                <span class="tag">Power Query</span>
+                <span class="tag">DAX</span>
+                <span class="tag">PowerBI</span>
               </div>
-              <a class="button button--secondary" href="#project-sql-pack">Mission SQL Revenue Pack</a>
+              <a class="button button--secondary" href="#project-sql-pack">PowerBI ETL Automation</a>
             </article>
             <article class="project-card project-card--dynamic reveal" style="--delay: 240ms">
               <span class="card__eyebrow">excel_merger.py</span>
@@ -196,7 +199,7 @@
             <div class="project-detail__head">
               <div>
                 <span class="eyebrow">Detailed project view</span>
-                <h2>Senior Sales Analysis Report</h2>
+                <h2>SQL Automation and Revenue Analytics</h2>
               </div>
             </div>
             <p>
@@ -209,11 +212,71 @@
               <li>Generated revenue by country, product, month, and top customer views</li>
             </ul>
             <div class="tag-row">
-              <span class="tag">Sales_Analysis_Senior_Report.xlsx</span>
+              <span class="tag">SQL</span>
               <span class="tag">Pandas</span>
-              <span class="tag">Pivot Tables</span>
+              <span class="tag">Revenue</span>
+            </div>
+            <div class="project-gallery-block reveal">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Transformation Proof</span>
+                <h3>Visualizing the automated flow</h3>
+                <p>
+                  Every frame in this sequence captures the analytical process: moving from messy raw data, mapping the ETL architecture, writing advanced PostgreSQL queries, and producing the final Month-over-Month trajectory.
+                </p>
+              </div>
+              <div class="project-gallery" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_automation/visuals/raw_messy_data.png" alt="raw messy data" loading="lazy" />
+                  <figcaption>raw messy data</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_automation/visuals/01_raw_data_source.png" alt="Raw Data Source" loading="lazy" />
+                  <figcaption>Raw Data</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_automation/visuals/02_etl_architecture_plan.png" alt="ETL Architecture Plan" loading="lazy" />
+                  <figcaption>Staging Data</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_automation/visuals/03_advanced_sql_execution.png" alt="Advanced SQL Execution" loading="lazy" />
+                  <figcaption>SQL Aggregation</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                  <img src="assets/projects/sql_automation/visuals/04_final_analytics_result.png" alt="Final Analytics Result" loading="lazy" />
+                  <figcaption>Complete Data</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Dashboard Integration -->
+            <div class="content-block reveal">
+              <span class="eyebrow">Interactive Live View</span>
+              <h3>Executive Revenue Analytics Dashboard</h3>
+              <p>
+                The following interactive briefing is powered by the automated ETL pipeline, serving real-time 
+                financial insights and regional performance metrics directly from the processed dataset.
+              </p>
+              <div class="dashboard-container" style="margin-top: 2rem; background: #161b22; border-radius: 28px; border: 1px solid #30363d; overflow: hidden;">
+                <div class="dashboard-header" style="padding: 1.25rem; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; background: #0d1117;">
+                  <span style="font-size: 0.85rem; color: #8b949e; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;">Deployment: Executive Briefing Engine</span>
+                  <span class="status-badge"><span class="pulse-dot"></span> System Live</span>
+                </div>
+                <iframe 
+                  src="./revenue-analytics-saas/executive.html" 
+                  width="100%" 
+                  height="800px" 
+                  frameborder="0" 
+                  style="display: block; background: #0d1117;">
+                </iframe>
+              </div>
+              <div class="button-row" style="margin-top: 1.5rem;">
+                <a class="button button--secondary" href="./revenue-analytics-saas/index.html">View Full Dashboard</a>
+                <a class="button button--secondary" href="./revenue-analytics-saas/customers.html">Customer Segmentation</a>
+              </div>
             </div>
           </article>
+
 
           <article class="project-detail project-detail--featured reveal" id="project-revenue-recovery-system">
             <div class="project-detail__head">
@@ -440,12 +503,13 @@ Every single record has been processed through the **Absolute Perfection (v2)** 
             <div class="project-detail__head">
               <div>
                 <span class="eyebrow">Detailed project view</span>
-                <h2>Mission SQL Revenue Pack</h2>
+                <h2>PowerBI ETL Automation</h2>
               </div>
             </div>
             <p>
-              This workbook combines order and customer data to deliver country revenue totals, top customer ranking,
-              monthly revenue trends, and combined spend analysis in one compact review sheet.
+              This solution replaces manual Excel consolidation with a robust PowerBI ETL pipeline. 
+              It uses Power Query to ingest multi-region source data, applies DAX for complex revenue logic, 
+              and delivers interactive reporting for stakeholder review.
             </p>
             <ul class="bullet-list">
               <li>Merged source tables to enrich reporting context</li>
@@ -675,6 +739,8 @@ tests/test_currency.py <span class="terminal-success">....</span>               
               <a class="button button--primary" href="./construction-intelligence-platform/dashboard/index.html">View Cleaned Dashboard</a>
               <a class="button button--secondary" href="./construction-intelligence-platform/reports/executive_summary.md">Summary Report</a>
             </div>
+          </article>
+
           </article>
         </div>
       </section>

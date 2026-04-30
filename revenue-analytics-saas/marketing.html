@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing | Revenue Analytics SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-icon"><i data-lucide="bar-chart-3"></i></div>
+                <span class="logo-text">RevAnalytics</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></a>
+                <a href="revenue.html" class="nav-item"><i data-lucide="trending-up"></i><span>Revenue</span></a>
+                <a href="customers.html" class="nav-item"><i data-lucide="users"></i><span>Customers</span></a>
+                <a href="products.html" class="nav-item"><i data-lucide="package"></i><span>Products</span></a>
+                
+                <a href="executive.html" class="nav-item"><i data-lucide="file-text"></i><span>Executive Report</span></a>
+            </nav>
+            <div class="sidebar-footer"><div class="status-indicator"><span class="dot"></span><span>Live Database</span></div></div>
+        </aside>
+
+        <main class="main-content fade-in">
+            <header class="">
+                    
+                <div>
+                    <h1>Marketing & Channels</h1>
+                    <p style="color: var(--text-muted); font-size: 0.875rem;">Conversion attribution and channel efficiency</p>
+                </div>
+                <div class="top-actions">
+                    <button class="theme-toggle" id="themeToggle"><i data-lucide="sun"></i></button>
+                </div>
+            </header>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="card">
+                    <h3 class="section-title">Revenue by Sales Channel</h3>
+                    <div id="channelRevenueBarChart" class="chart-container"></div>
+                </div>
+                <div class="card">
+                    <h3 class="section-title">Payment Method Mix</h3>
+                    <div id="paymentMixChart" class="chart-container"></div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="card">
+                    <h3 class="section-title">Avg Order Value by Channel</h3>
+                    <div id="channelAovChart" class="chart-container"></div>
+                </div>
+                <div class="card">
+                    <h3 class="section-title">Purchase Volume by Hour</h3>
+                    <div id="peakHoursChart" class="chart-container"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/appData.js"></script>
+    <script src="assets/js/init.js"></script>
+`n    
+    <script>lucide.createIcons();</script>
+`n    `n    
+`n    `n    
+<script src="assets/js/appData.js"></script>
+    <script src="assets/js/init.js"></script>
+`n    <script src="assets/js/charts.js"></script>`n    <script src="assets/js/app.js"></script>`n    <script src="assets/js/filters.js"></script>
+</body>
+</html>
+
+
+
+
+
+
