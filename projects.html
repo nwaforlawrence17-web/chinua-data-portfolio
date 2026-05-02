@@ -70,6 +70,21 @@
           </div>
           <!-- Duplicate one .project-card and one matching .project-detail block below to add a future project. -->
           <div class="card-grid card-grid--three">
+            <article class="project-card project-card--dynamic reveal" style="--delay: 40ms">
+              <span class="card__eyebrow">revenue_pipeline.py</span>
+              <h3>Automated Revenue Analytics Pipeline</h3>
+              <p>End-to-end Python pipeline transforming messy retail data into executive-grade financial insights with automated SQL validation.</p>
+              <div class="tag-row">
+                <span class="tag">Python (Pandas)</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">ETL Automation</span>
+              </div>
+              <div class="button-row" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                <a class="button button--secondary" href="#project-automated-revenue" style="padding: 0.5rem 0.75rem; font-size: 0.8rem;">Details</a>
+                <a class="button button--primary" href="https://github.com/nwaforlawrence17-web/sales-intelligence-system" target="_blank" style="padding: 0.5rem 0.75rem; font-size: 0.8rem;">Repo</a>
+                <a class="button button--accent" href="automated-revenue-dashboard.html" target="_blank" style="padding: 0.5rem 0.75rem; font-size: 0.8rem; background: #22c55e; color: white;">Live Demo</a>
+              </div>
+            </article>
             <article class="project-card project-card--dynamic reveal" style="--delay: 80ms">
               <span class="card__eyebrow">sql_automation_pipeline.py</span>
               <h3>SQL Automation and Revenue Analytics</h3>
@@ -178,16 +193,21 @@
               </div>
               <a class="button button--secondary" href="#project-growth-workbook">Comparative Growth Workbook</a>
             </article>
+            <!-- Anchor with scroll offset for fixed header -->
+            <div id="project-card-global-construction" style="position: relative; top: -100px; visibility: hidden;"></div>
             <article class="project-card project-card--dynamic reveal" style="--delay: 480ms">
               <span class="card__eyebrow">construction_pipeline.py</span>
-              <h3>Construction Intelligence Platform</h3>
+              <h3>Global Construction Risk Analytics Platform</h3>
               <p>High-performance portfolio risk dashboard managing 2,240 global project records with multi-currency USD normalization.</p>
               <div class="tag-row">
                 <span class="tag">Python (Pandas)</span>
                 <span class="tag">Plotly.js</span>
                 <span class="tag">Portfolio Risk</span>
               </div>
-              <a class="button button--secondary" href="#project-construction-intel">Construction Intelligence Platform</a>
+              <div class="button-row" style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+                <a class="button button--secondary" href="#project-global-construction-risk">View Details</a>
+                <a class="button button--primary" href="https://github.com/nwaforlawrence17-web/Global-Construction-Risk-Analytics-Platform" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.85rem;">View Repo</a>
+              </div>
             </article>
           </div>
         </div>
@@ -660,12 +680,13 @@ Every single record has been processed through the **Absolute Perfection (v2)** 
           </article>
 
 
-          <article class="project-detail reveal" id="project-construction-intel">
+          <article class="project-detail reveal" id="project-global-construction-risk">
             <div class="project-detail__head">
               <div>
                 <span class="eyebrow">Flagship Data Architecture</span>
-                <h2>Construction Intelligence Platform</h2>
+                <h2>Global Construction Risk Analytics Platform</h2>
               </div>
+              <a class="button button--primary" href="https://github.com/nwaforlawrence17-web/Global-Construction-Risk-Analytics-Platform" target="_blank">View Repo on GitHub</a>
             </div>
             
             <!-- Phase 1: The Transformation Gallery -->
@@ -673,15 +694,15 @@ Every single record has been processed through the **Absolute Perfection (v2)** 
               <span class="eyebrow">The Data Transformation Flow</span>
               <div class="project-gallery project-gallery--three">
                 <figure class="gallery-item">
-                  <img src="assets/projects/construction_intel/visuals/raw_data_proof.png" alt="Raw unformatted Excel data with mixed currencies" />
+                  <img src="assets/projects/Global%20Construction%20Risk%20Analytics%20Platform/visuals/raw_data_proof.png" alt="Raw unformatted Excel data with mixed currencies" />
                   <figcaption>01. Raw Entropy</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                  <img src="assets/projects/construction_intel/visuals/cleaned_data_proof.png" alt="Normalized and structured operational data" />
+                  <img src="assets/projects/Global%20Construction%20Risk%20Analytics%20Platform/visuals/cleaned_data_proof.png" alt="Normalized and structured operational data" />
                   <figcaption>02. Engineering Clarity</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                  <img src="assets/projects/construction_intel/visuals/dashboard_mockup.png" alt="Flat UI software interface mockup for executive dashboard" />
+                  <img src="assets/projects/Global%20Construction%20Risk%20Analytics%20Platform/visuals/dashboard_mockup.png" alt="Flat UI software interface mockup for executive dashboard" />
                   <figcaption>03. Final Interface (Flat UI)</figcaption>
                 </figure>
               </div>
@@ -712,7 +733,7 @@ Every single record has been processed through the **Absolute Perfection (v2)** 
               </p>
               <div class="terminal-snippet">
                 <code>
-<span class="terminal-info">rootdir: /construction-intelligence-platform</span>
+<span class="terminal-info">rootdir: /Global-Construction-Risk-Analytics-Platform</span>
 <span class="terminal-info">collected 11 items</span>
 
 tests/test_calculations.py <span class="terminal-success">....</span>                      [ 36%]
@@ -737,11 +758,109 @@ tests/test_currency.py <span class="terminal-success">....</span>               
             <!-- Phase 3: The Result -->
             <div class="project-card__actions--detail button-row">
               <span class="button-row__label">Phase 03: The Result</span>
-              <a class="button button--primary" href="./construction-intelligence-platform/dashboard/index.html">View Cleaned Dashboard</a>
-              <a class="button button--secondary" href="./construction-intelligence-platform/reports/executive_summary.md">Summary Report</a>
+              <a class="button button--primary" href="./Global%20Construction%20Risk%20Analytics%20Platform/dashboard/index.html">View Cleaned Dashboard</a>
+              <a class="button button--secondary" href="./Global%20Construction%20Risk%20Analytics%20Platform/reports/executive_summary.md">Summary Report</a>
             </div>
           </article>
 
+          <article class="project-detail reveal" id="project-automated-revenue">
+            <div class="project-detail__head">
+              <div>
+                <span class="eyebrow">Detailed project view</span>
+                <h2>Automated Revenue Analytics Pipeline</h2>
+              </div>
+              <a class="button button--primary" href="https://github.com/nwaforlawrence17-web/sales-intelligence-system" target="_blank">View Repo on GitHub</a>
+            </div>
+            <p>
+              This flagship engineering project solves the "Messy Data" problem for retail enterprises. It automates the ingestion of corrupted CSV records, purges duplicate entries, normalizes financial values, and serves the results to a PostgreSQL data warehouse for real-time reporting.
+            </p>
+
+            <!-- Strategic Project Summary -->
+            <div class="summary-report-block reveal" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 2rem; margin: 2rem 0;">
+              <span class="eyebrow" style="color: #22c55e;">Strategic Project Summary</span>
+              <h3 style="margin-top: 0.5rem;">Executive Performance Overview</h3>
+              <div class="summary-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+                <div class="summary-item">
+                  <h4 style="font-size: 0.85rem; color: #8b949e; text-transform: uppercase;">Total Revenue</h4>
+                  <p style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 0.25rem;">$10.7M</p>
+                  <span style="font-size: 0.75rem; color: #22c55e;">Peak: $1.07M (Mar '25)</span>
+                </div>
+                <div class="summary-item">
+                  <h4 style="font-size: 0.85rem; color: #8b949e; text-transform: uppercase;">Reporting Efficiency</h4>
+                  <p style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 0.25rem;">&lt; 10s</p>
+                  <span style="font-size: 0.75rem; color: #8b949e;">Reduced from 4 Hours</span>
+                </div>
+                <div class="summary-item">
+                  <h4 style="font-size: 0.85rem; color: #8b949e; text-transform: uppercase;">Data Accuracy</h4>
+                  <p style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-top: 0.25rem;">100%</p>
+                  <span style="font-size: 0.75rem; color: #22c55e;">Duplicates Resolved</span>
+                </div>
+              </div>
+              <div class="summary-narrative" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p style="font-style: italic; color: #e5e7eb;">
+                  "By implementing an automated ETL pipeline, we transitioned from fragmented Excel silos to a unified PostgreSQL intelligence layer. This system currently identifies that 37.3% of revenue is driven by a single product line (Rice), enabling targeted regional strategy adjustments."
+                </p>
+              </div>
+            </div>
+            <ul class="bullet-list">
+              <li>**Setup**: Custom script generates realistic messy data with `#N/A` and date errors.</li>
+              <li>**Cleaning**: Python-based normalization engine handles complex string and numeric validation.</li>
+              <li>**Persistence**: Idempotent SQL loading logic ensures database integrity across multiple runs.</li>
+              <li>**Analytics**: Advanced SQL views calculate MoM growth and regional revenue splits.</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Pandas</span>
+              <span class="tag">SQLAlchemy</span>
+              <span class="tag">Data Quality</span>
+            </div>
+
+            <!-- Dashboard Integration -->
+            <div class="content-block reveal" style="margin-top: 3rem;">
+              <span class="eyebrow">Interactive Live View</span>
+              <h3>Executive Sales Intelligence Dashboard</h3>
+              <p>
+                The following interactive dashboard is the final output of the automated pipeline. 
+                It delivers real-time regional performance, product concentration, and seasonal trends 
+                directly from the cleaned dataset.
+              </p>
+              <div class="dashboard-container" style="margin-top: 2rem; background: #161b22; border-radius: 28px; border: 1px solid #30363d; overflow: hidden;">
+                <div class="dashboard-header" style="padding: 1.25rem; border-bottom: 1px solid #30363d; display: flex; justify-content: space-between; align-items: center; background: #0d1117;">
+                  <span style="font-size: 0.85rem; color: #8b949e; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;">Deployment: Sales Intelligence Engine</span>
+                  <span class="status-badge"><span class="pulse-dot"></span> System Live</span>
+                </div>
+                <iframe 
+                  src="automated-revenue-dashboard.html" 
+                  width="100%" 
+                  height="1020px" 
+                  frameborder="0" 
+                  style="display: block; background: #0d1117;">
+                </iframe>
+              </div>
+            </div>
+            <div class="project-gallery-block reveal" style="margin-top: 3rem;">
+              <div class="project-gallery__copy">
+                <span class="eyebrow">Transformation Proof</span>
+                <h3>From Raw Entropy to Executive Intelligence</h3>
+                <p>
+                  This sequence demonstrates the automated pipeline's ability to ingest corrupted sales records, 
+                  standardize multi-format datasets, and derive high-level business metrics for decision-makers.
+                </p>
+              </div>
+              <div class="project-gallery" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                <figure class="gallery-item">
+                  <img src="assets/projects/automated_revenue/visuals/01_raw_input.png" alt="Raw unformatted sales data" loading="lazy" />
+                  <figcaption>01. Raw Input</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/automated_revenue/visuals/02_standardized_data.png" alt="Standardized and cleaned sales data" loading="lazy" />
+                  <figcaption>02. Standardized Data</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                  <img src="assets/projects/automated_revenue/visuals/03_executive_insights.png" alt="Final executive revenue analysis" loading="lazy" />
+                  <figcaption>03. Executive Insights</figcaption>
+                </figure>
+              </div>
+            </div>
           </article>
         </div>
       </section>
